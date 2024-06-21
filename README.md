@@ -39,4 +39,3 @@ website link :https://yoga-react-red.vercel
 ![D A Y S](https://github.com/christalselvin/D.A.Y.S-Front/assets/127867279/8dce7745-3c1b-48d4-b173-3bb1996a992c)
 ![chat](https://github.com/christalselvin/D.A.Y.S-Front/assets/127867279/a9a8deac-de66-460b-a5a7-bf02432419f7)
 
-.app/
