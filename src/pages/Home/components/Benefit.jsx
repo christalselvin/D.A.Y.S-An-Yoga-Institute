@@ -5,7 +5,7 @@ import { BenefitTypes } from "../../data/types";
 export default function Benefit() {
   return (
     <motion.div
-      className="container flex flex-col md:flex-row justify-center items-center gap-6 w-[90%] md:w-[80%] mx-auto py-10 md:py-[10rem]"
+      className="container flex flex-col md:flex-row justify-center items-center gap-6 w-[90%] md:w-[80%] mx-auto py-10 md:py-[10rem] font-semibold"
       variants={{
         hidden: { opacity: 1, scale: 1 },
         visible: { transition: { staggerChildren: 0.1 } },

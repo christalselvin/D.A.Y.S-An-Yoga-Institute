@@ -1,24 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import { motion } from "framer-motion";
 import { icons } from "../../data/data";
-import logo from "./assets/logo background.png"; // Ensure this is a PNG with a transparent background
+import Logo from "./Logo"; // Import the new Logo component
 
 export default function Navbar() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPosition = window.pageYOffset;
+
+      setIsVisible(scrollPosition > currentScrollPosition || currentScrollPosition < 10);
+      setScrollPosition(currentScrollPosition);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
+
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 flex justify-between items-center py-2 px-4 text-white bg-green-600 border-b border-gray-100 z-50">
-        <div className="flex items-center">
-          <img
-            className="w-16 h-16 object-contain transition duration-300 ease-in-out transform hover:scale-110 hover:brightness-125 hover:filter hover:contrast-125"
-            src={logo}
-            alt="Logo"
-          />
-          <p className="ml-2 text-sm md:text-base font-bold">Yoga Institute</p>
-        </div>
+      <nav
+        className={`fixed top-0 left-0 right-0 flex justify-between items-center py-2 px-4 text-white bg-green-600 border-b border-gray-100 z-50 font-times transition-transform duration-300 ${
+          isVisible ? "transform translate-y-0" : "transform -translate-y-full"
+        }`}
+      >
+        <a href="/">
+          <div className="flex items-center">
+            <Logo className="h-8 md:h-10" /> {/* Adjust logo size */}
+            <p className="ml-2 text-sm md:text-base font-bold" style={{ fontFamily: 'Lucida Bright' }}>
+              D.A.Y.S An Yoga
+            </p>
+          </div>
+        </a>
 
-        <ul className="hidden md:flex gap-8">
+        <ul className="hidden md:flex gap-8" style={{ fontFamily: 'Lucida Bright' }}>
           <li>
             <Link
               to="/"
@@ -53,7 +75,7 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <div className="flex md:hidden gap-6">
+        <div className="flex gap-6 md:hidden"> {/* Show icons on small screens */}
           {icons.map((item) => (
             <motion.li
               key={item.id}
@@ -68,7 +90,7 @@ export default function Navbar() {
           ))}
         </div>
       </nav>
-      <div className="pt-16"> {/* Add top padding to avoid content overlap */}
+      <div className="pt-16" style={{ fontFamily: 'Times New Roman' }}>
         <Outlet />
       </div>
       <Footer />

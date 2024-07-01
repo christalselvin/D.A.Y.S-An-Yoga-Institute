@@ -25,18 +25,81 @@ export default function App() {
             <>
               <Navbar />
               <Home />
+              <Footer />
             </>
           }
         />
-        <Route path="/career" element={<Career />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/job_apply" element={<JobApply />} />
-        <Route path="/demo" element={<Demo />} />
-        <Route path="/form" element={<Form />} />
-        <Route path="/chat" element={<Chatbot />} />
+        <Route
+          path="/career"
+          element={
+            <>
+              <Navbar />
+              <Career />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Navbar />
+              <Contact />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <>
+              <Navbar />
+              <About />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/job_apply"
+          element={
+            <>
+              <Navbar />
+              <JobApply />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/demo"
+          element={
+            <>
+              <Navbar />
+              <Demo />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/form"
+          element={
+            <>
+              <Navbar />
+              <Form />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/chat"
+          element={
+            <>
+              <Navbar />
+              <Chatbot />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
-      <Footer/>
     </Router>
   );
 }

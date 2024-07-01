@@ -10,7 +10,9 @@ export default function Card({ jobTitle, jobDescription }) {
       variants={fadeIn("down", 0.3)}
       initial="hidden"
       whileInView="show"
-      className="w-full md:w-[300px] py-6 px-4 grid gap-4 shadow-lg border border-gray-200 rounded-xl transition duration-250 hover:scale-105 bg-white"
+      className="w-full md:w-[300px] py-6 px-4 grid gap-4 shadow-lg border border-gray-200 rounded-xl transition duration-250 hover:scale-105 bg-white overflow-hidden"
+      // Adding overflow-hidden to prevent horizontal scrollbar
+      style={{ marginBottom: "20px" }} // Adding margin to create space between cards
     >
       <div className="text-center">
         <i className="text-4xl text-gray-500"></i>
@@ -22,9 +24,11 @@ export default function Card({ jobTitle, jobDescription }) {
           Fresher/Experience
         </h3>
       </div>
+      
       <p className="text-sm text-gray-600 mt-2">
         {jobDescription}
       </p>
+      
       <div className="flex justify-center mt-4">
         <Link to="/job_apply">
           <Button className="bg-blue-500 text-white px-4 py-2 hover:bg-blue-600 rounded-full text-sm font-medium">

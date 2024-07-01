@@ -14,7 +14,12 @@ export default function ContactForm() {
     console.log("Submit button clicked");
     try {
       // Check if name, email, subject, and message are empty
-      if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
+      if (
+        !formData.name.trim() ||
+        !formData.email.trim() ||
+        !formData.subject.trim() ||
+        !formData.message.trim()
+      ) {
         alert("Please fill in all fields");
         return;
       }
@@ -118,13 +123,17 @@ export default function ContactForm() {
           <textarea
             id="message"
             rows="5"
+            style={{ resize: "none" }} // This disables resizing of the textarea
             className="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-green-500"
             value={formData.message}
             onChange={handleChange}
             required
           ></textarea>
 
-          <Button className="bg-blue-500 hover:bg-blue-700 text-white rounded-md" onClick={handleSend}>
+          <Button
+            className="bg-blue-500 hover:bg-blue-700 text-white rounded-md"
+            onClick={handleSend}
+          >
             Send
           </Button>
         </div>
