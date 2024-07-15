@@ -8,9 +8,9 @@ import ContactForm from "./ContactForm.jsx";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen flex justify-center items-center py-8 px-4"> {/* Center the content horizontally and vertically */}
-            <Navbar/>
-      <div className="flex flex-row space-x-8 w-full max-w-screen-lg"> {/* Align children in a row with space between */}
+    <div className="min-h-screen flex flex-col justify-center items-center py-8 px-4 md:flex-row md:space-x-8"> {/* Responsive flex direction */}
+      <Navbar />
+      <div className="flex flex-col w-full max-w-screen-lg md:flex-row md:space-x-8"> {/* Responsive alignment */}
         <ContactCard />
         <ContactForm />
       </div>

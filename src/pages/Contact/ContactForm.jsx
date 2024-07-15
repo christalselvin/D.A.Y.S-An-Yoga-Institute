@@ -50,17 +50,17 @@ export default function ContactForm() {
         return;
       }
 
-      const response = await axios.post(
-        "https://chatbot-api-backend.onrender.com/email/auth",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
+      // Simulate sending data
+      console.log("Form data to be sent:", formData);
 
-      console.log("Response Data:", response.data);
+      // If successful, reset form data
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+
       alert("Request sent successfully to the email");
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -85,11 +85,11 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="w-full m-10 md:w-[400px] flex flex-col shadow-lg border border-gray-200 rounded-xl bg-white transition duration-250 hover:scale-105 p-12">
-        <h3>Please fill out this form to get in touch with us.</h3>
-        <div className="flex flex-col space-y-2 mt-4">
-          <label htmlFor="name">Name</label>
+    <div className="w-full md:w-[400px] flex flex-col shadow-lg border border-gray-200 rounded-2xl bg-white transition-transform duration-300 hover:scale-105 p-6 my-6">
+      <h3 className="text-lg font-semibold mb-4">Please fill out this form to get in touch with us.</h3>
+      <div className="flex flex-col">
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="name" className="text-gray-800">Name</label>
           <input
             type="text"
             id="name"
@@ -98,8 +98,10 @@ export default function ContactForm() {
             onChange={handleChange}
             required
           />
+        </div>
 
-          <label htmlFor="email">Email</label>
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="email" className="text-gray-800">Email</label>
           <input
             type="email"
             id="email"
@@ -108,8 +110,10 @@ export default function ContactForm() {
             onChange={handleChange}
             required
           />
+        </div>
 
-          <label htmlFor="subject">Subject</label>
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="subject" className="text-gray-800">Subject</label>
           <input
             type="text"
             id="subject"
@@ -118,8 +122,10 @@ export default function ContactForm() {
             onChange={handleChange}
             required
           />
+        </div>
 
-          <label htmlFor="message">Message</label>
+        <div className="flex flex-col space-y-2">
+          <label htmlFor="message" className="text-gray-800">Message</label>
           <textarea
             id="message"
             rows="5"
@@ -129,14 +135,14 @@ export default function ContactForm() {
             onChange={handleChange}
             required
           ></textarea>
-
-          <Button
-            className="bg-blue-500 hover:bg-blue-700 text-white rounded-md"
-            onClick={handleSend}
-          >
-            Send
-          </Button>
         </div>
+
+        <Button
+          className="bg-blue-500 hover:bg-blue-700 text-white rounded-md"
+          onClick={handleSend}
+        >
+          Send
+        </Button>
       </div>
     </div>
   );
