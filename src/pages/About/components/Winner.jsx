@@ -1,4 +1,4 @@
-import Achievement from "../../Home/components/Achievement";
+// import Achievement from "../../Home/components/Achievement";
 import LiveSore from "./LiveScore";
 
 export default function Winner() {
@@ -14,7 +14,7 @@ export default function Winner() {
         <div>Certificated Practices</div>
       </div>
       <div className="mt-8">
-        <Achievement />
+        {/* <Achievement /> */}
       </div>
     </div>
   );

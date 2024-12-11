@@ -1,99 +1,110 @@
-import React, { useState, useEffect } from "react";
-import { Link, Outlet } from "react-router-dom";
-import Footer from "./Footer";
-import { motion } from "framer-motion";
-import { icons } from "../../data/data";
-import Logo from "./Logo"; // Import the new Logo component
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "./Logo"; 
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import { motion } from "framer-motion"; 
 
 export default function Navbar() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPosition = window.pageYOffset;
-
-      setIsVisible(scrollPosition > currentScrollPosition || currentScrollPosition < 10);
-      setScrollPosition(currentScrollPosition);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollPosition]);
-
   return (
     <>
-      <nav
-        className={`fixed top-0 left-0 right-0 flex justify-between items-center py-2 px-4 text-white bg-green-600 border-b border-gray-100 z-50 font-times transition-transform duration-300 ${
-          isVisible ? "transform translate-y-0" : "transform -translate-y-full"
-        }`}
+      <motion.nav
+        className={`fixed left-0 right-0 flex justify-between items-center py-2 px-4 z-50 text-white bg-green-600`}
+        initial={{ opacity: 0, y: -50 }} 
+        animate={{ opacity: 1, y: 0 }}   
+        transition={{ duration: 0.5 }}   
       >
         <a href="/">
           <div className="flex items-center">
-            <Logo className="h-8 md:h-10" /> {/* Adjust logo size */}
-            <p className="ml-2 text-sm md:text-base font-bold" style={{ fontFamily: 'Lucida Bright' }}>
-              D.A.Y.S An Yoga
-            </p>
+            <Logo className="h-8 md:h-10" />
+
           </div>
         </a>
 
-        <ul className="hidden md:flex gap-8" style={{ fontFamily: 'Lucida Bright' }}>
-          <li>
+        <ul className="hidden md:flex gap-8" style={{ fontFamily: 'Poppins' }}>
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
             <Link
               to="/"
               className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400"
             >
               Home
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
             <Link
               to="/career"
               className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400"
             >
-              Career
+              Articles
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+          >
             <Link
               to="/about"
               className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400"
             >
               About Us
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
             <Link
               to="/contact"
               className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400"
             >
               Contact Us
             </Link>
-          </li>
-        </ul>
+          </motion.li>
 
-        <div className="flex gap-6 md:hidden"> {/* Show icons on small screens */}
-          {icons.map((item) => (
-            <motion.li
-              key={item.id}
-              className="list-none"
-              whileHover={{ scale: 1.3 }}
-              transition={{ type: "spring" }}
+          <div className="flex gap-4">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <Link to={item.link}>
-                <i className="text-[1.8rem] cursor-pointer">{item.icon}</i>
-              </Link>
-            </motion.li>
-          ))}
-        </div>
-      </nav>
-      <div className="pt-16" style={{ fontFamily: 'Times New Roman' }}>
-        <Outlet />
-      </div>
-      <Footer />
+              <WhatsAppIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+            >
+              <TwitterIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+            >
+              <YouTubeIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+            >
+              <FacebookIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+            </motion.div>
+          </div>
+        </ul>
+      </motion.nav>
     </>
   );
 }

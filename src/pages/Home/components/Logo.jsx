@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./assets/logo background.png"; // Ensure this is a PNG with a transparent background
+import logo from "./assets/logo.png";
 
 const Logo = () => {
   return (

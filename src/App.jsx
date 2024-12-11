@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./pages/Home/components/Navbar";
-import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import JobApply from "./pages/Career/components/JobApply";
@@ -11,7 +10,7 @@ import Register from "./pages/UI/Register";
 import Demo from "./pages/Demo";
 import Chatbot from "./pages/Home/components/Chatbot";
 import Form from "./pages/Home/components/Form";
-import Footer from "./pages/Home/components/Footer";
+
 
 export default function App() {
   return (
@@ -25,7 +24,6 @@ export default function App() {
             <>
               <Navbar />
               <Home />
-              <Footer />
             </>
           }
         />
@@ -34,8 +32,8 @@ export default function App() {
           element={
             <>
               <Navbar />
-              <Career />
-              <Footer />
+
+             
             </>
           }
         />
@@ -45,7 +43,6 @@ export default function App() {
             <>
               <Navbar />
               <Contact />
-              <Footer />
             </>
           }
         />
@@ -55,7 +52,6 @@ export default function App() {
             <>
               <Navbar />
               <About />
-              <Footer />
             </>
           }
         />
@@ -65,7 +61,6 @@ export default function App() {
             <>
               <Navbar />
               <JobApply />
-              <Footer />
             </>
           }
         />
@@ -75,7 +70,6 @@ export default function App() {
             <>
               <Navbar />
               <Demo />
-              <Footer />
             </>
           }
         />
@@ -85,7 +79,6 @@ export default function App() {
             <>
               <Navbar />
               <Form />
-              <Footer />
             </>
           }
         />
@@ -95,7 +88,6 @@ export default function App() {
             <>
               <Navbar />
               <Chatbot />
-              <Footer />
             </>
           }
         />
