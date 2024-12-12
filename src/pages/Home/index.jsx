@@ -4,15 +4,21 @@ import About from "./components/About";
 import Benefit from "./components/Benefit"
 import Testimonial from "./components/Testimonial"
 import Footer from "./components/Footer";
+import Inner from "./components/Inner";
+import OurOffer from "./components/Ouroffer";
+import Powerofyoga from "./components/Powerogyoga";
 
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screen">
+    <div className="">
       <Welcome />
-      <About />
-      <Benefit />
-      <Testimonial />
+      {/* <About /> */}
+      {/* <Benefit /> */}
+      {/* <Testimonial /> */}
+      <Inner />
+      <OurOffer />
+      <Powerofyoga />
       <Footer />
     </div>
   );

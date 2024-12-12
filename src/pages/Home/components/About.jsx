@@ -48,7 +48,7 @@ export default function About() {
           Whether you are a beginner or an advanced practitioner, our classes are designed to challenge and inspire you.
           Join us on a journey of self-discovery and rejuvenation at D.A.Y.S An Yoga Institute, where every breath brings you closer to harmony and tranquility.
         </p>
-        <div className="flex justify-around items-center p-5 mt-8">
+        <div className="flex justify-around items-center  mt-8">
           {statsData.map((stat, index) => (
             <div key={index} className="text-center">
               <h2 className="text-3xl font-bold text-red-500">{stat.value}</h2>

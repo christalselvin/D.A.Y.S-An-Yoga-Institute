@@ -5,6 +5,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { motion } from "framer-motion"; 
 
 export default function Navbar() {
@@ -19,7 +20,6 @@ export default function Navbar() {
         <a href="/">
           <div className="flex items-center">
             <Logo className="h-8 md:h-10" />
-
           </div>
         </a>
 
@@ -79,28 +79,45 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <WhatsAppIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              <a href="https://wa.me/918127227284" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              <TwitterIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              <a href="https://x.com/ashishu9899?lang=en" target="_blank" rel="noopener noreferrer">
+                <TwitterIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <YouTubeIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              <a href="https://youtube.com/@anyogainstitute?si=lowYzoFr96ofjBE0" target="_blank" rel="noopener noreferrer">
+                <YouTubeIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.9, duration: 0.5 }}
             >
-              <FacebookIcon className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              <a href="https://www.facebook.com/profile.php?id=100071712365099" target="_blank" rel="noopener noreferrer">
+                <FacebookIcon  className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              </a>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9, duration: 0.5 }}
+            >
+              <a href="https://www.instagram.com/anyogainstitute?igsh=MXRmaWh0dmtyNGZsMw==" target="_blank" rel="noopener noreferrer">
+                <InstagramIcon  className="hover:underline focus:text-rose-600 transition duration-300 ease-in-out hover:text-yellow-400" />
+              </a>
             </motion.div>
           </div>
         </ul>

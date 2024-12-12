@@ -33,7 +33,7 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <div className="max-w-6xl mx-auto p-12">
+    <div className="">
       <div className="bg-blue-100 shadow-2xl rounded-2xl p-40">
         <div className="flex items-center">
           <img

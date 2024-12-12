@@ -1,55 +1,69 @@
 import React from "react";
 import CallMergeIcon from "@mui/icons-material/CallMerge";
 import { motion } from "framer-motion";
-import hero from "../components/assets/hero.jpg";
+import hero from "../components/assets/hero.png";
 import { Link } from "react-router-dom";
+
+const AnimatedText = ({ children, initialY, delay }) => (
+  <motion.p
+    className="w-full text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-Poynter Oldstyle Display font-['poppins'] mt-8"
+    initial={{ y: initialY }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.5, delay: delay }}
+  >
+    <CallMergeIcon style={{ color: "blue" }} /> {children}
+  </motion.p>
+);
 
 export default function Welcome() {
   return (
-    <div className="min-h-screen overflow-x-hidden min-h-screen">
-      <div className="md:my-[5rem]">
-        <motion.p
-          className="md:text-3xl p-12 m-1 font-Poynter Oldstyle Display font-['poppins'] relative top-[120px] right-[28px]"
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <CallMergeIcon style={{ color: "blue" }} /> Yoga is really the art of waking up.
-        </motion.p>
-      </div>
+    <div className="min-h-screen flex flex-col justify-center items-center overflow-x-hidden text-center px-4 lg:px-16">
+      {/* Heading */}
       <motion.p
-        className="new-content relative top-[40px] right-[-99px] w-[80ch] text-lg font-Poynter Oldstyle Display font-['poppins'] relative"
-        initial={{ y: 100 }}
-        animate={{ y: 0 }}
+        className="text- sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl p-10 m-1 font-Poynter Oldstyle Display font-['poppins'] mt-8 sm:p-4 md:p-6 lg:p-12 xl:p-16"
+        initial={{ y: 1000 }}
+        animate={{ y: 70 }}
         transition={{ duration: 0.5 }}
       >
-        <CallMergeIcon style={{ color: "blue" }} /> Getting back to the true you. It can be that simple. Yoga offers up a way for us to see a world that is working for you instead of against you.
+        <CallMergeIcon style={{ color: "blue" }} /> Yoga is really the art of waking up.
       </motion.p>
-      <motion.p
-        className="new-content relative top-[80px] right-[-99px] w-[90ch] text-lg font-Poynter Oldstyle Display font-['poppins'] relative"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <CallMergeIcon style={{ color: "blue" }} /> Yoga reminds me that everything is connected so we must live, act, breathe with awareness. The process is the candy.
-      </motion.p>
+
+      {/* Content */}
+      <AnimatedText initialY={{ sm: 120, md: 150, lg: 180, xl: 200, '2xl': 250 }} delay={0.2}>
+        Getting back to the true you. It can be that simple. Yoga offers up a way for us to see a world that is working for you instead of against you.
+      </AnimatedText>
+
+      <AnimatedText initialY={{ sm: 150, md: 180, lg: 210, xl: 240, '2xl': 290 }} delay={0.4}>
+        Yoga reminds me that everything is connected so we must live, act, breathe with awareness. The process is the candy.
+      </AnimatedText>
+
+      <AnimatedText initialY={{ sm: 180, md: 210, lg: 240, xl: 270, '2xl': 320 }} delay={0.6}>
+        Embrace mindfulness and inner peace through yoga. Our practice encourages balance, strength, and clarity, helping you find harmony in your daily life.
+      </AnimatedText>
+
+      {/* Button */}
       <motion.div
-        className="flex justify-end relative top-[-150px] left-[-100px]"
-        initial={{ scale: 0.5 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <img src={hero} alt="Yoga hero" className="w-[290px] h-auto" />
-      </motion.div>
-      <motion.div
-        className="relative top-[-190px] left-[-200px] text-center"
-        initial={{ y: 50, opacity: 0 }}
+        className="text-center mt-8"
+        initial={{ y: 250, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <button className="bg-green-500 text-white font-bold py-2 px-4 rounded-full shadow-lg relative top-[60px] right-[-100px]">
-         <Link to="contact"> Contact Us</Link>
+        <button
+          className="px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-blue-500 text-white text-lg font-semibold rounded-full transform hover:scale-105 hover:bg-green-500 transition duration-300 ease-in-out shadow-lg"
+          aria-label="Contact Us"
+        >
+          <Link to="contact" className="inline-block w-full h-full">Contact Us</Link>
         </button>
+      </motion.div>
+
+      {/* Image */}
+      <motion.div
+        className="flex justify-center mt-8 sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]"
+        initial={{ y: 300, scale: 0.5 }}
+        animate={{ y: 0, scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <img src={hero} alt="Yoga hero" className="w-full h-auto" />
       </motion.div>
     </div>
   );
