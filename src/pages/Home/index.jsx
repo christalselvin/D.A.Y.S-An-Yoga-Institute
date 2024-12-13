@@ -13,9 +13,9 @@ export default function Home() {
   return (
     <div className="">
       <Welcome />
-      {/* <About /> */}
-      {/* <Benefit /> */}
-      {/* <Testimonial /> */}
+      <About />
+      <Benefit />
+      <Testimonial />
       <Inner />
       <OurOffer />
       <Powerofyoga />
