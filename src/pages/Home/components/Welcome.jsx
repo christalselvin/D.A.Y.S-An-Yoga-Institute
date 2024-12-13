@@ -48,7 +48,7 @@ export default function Welcome() {
       </div>
 
       {/* Hero Image Section */}
-      <div className="flex justify-center mt-1 mx-auto max-w-72 sm:max-w-[00px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px]">
+      <div className="flex justify-center mt-1 mx-auto max-w-64 sm:max-w-[00px] md:max-w-[600px] lg:max-w-[700px] xl:max-w-[800px] 2xl:max-w-[900px]">
         <img src={hero} alt="Yoga hero" className="w-full h-auto" />
       </div>
     </div>
