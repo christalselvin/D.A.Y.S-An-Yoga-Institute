@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const AnimatedText = ({ children, initialY, delay }) => (
   <motion.p
-    className="w-full text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-Poynter Oldstyle Display font-['poppins'] mt-8"
+    className="w-full text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-Poynter Oldstyle Display font-['poppins'] mt-10"
     initial={{ y: initialY }}
     animate={{ y: 0 }}
     transition={{ duration: 0.5, delay: delay }}
@@ -17,18 +17,16 @@ const AnimatedText = ({ children, initialY, delay }) => (
 
 export default function Welcome() {
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center overflow-x-hidden text-center px-4 lg:px-16">
-      {/* Heading */}
+    <div className="flex flex-col justify-center items-right overflow-x-hidden text-left text-right text-center text-justify px-4 lg:px-16">
       <motion.p
-        className="text- sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl p-10 m-1 font-Poynter Oldstyle Display font-['poppins'] mt-8 sm:p-4 md:p-6 lg:p-12 xl:p-16"
+        className="text-sm sm:text-4xl font-bold text-center md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl p-10 m-1 font-Poynter Oldstyle Display font-['poppins'] mt-8 sm:p-4 md:p-6 lg:p-12 xl:p-16 text-g"
         initial={{ y: 1000 }}
         animate={{ y: 70 }}
         transition={{ duration: 0.5 }}
       >
-        <CallMergeIcon style={{ color: "blue" }} /> Yoga is really the art of waking up.
+        <h1>Yoga is really the art of waking up</h1>
       </motion.p>
 
-      {/* Content */}
       <AnimatedText initialY={{ sm: 120, md: 150, lg: 180, xl: 200, '2xl': 250 }} delay={0.2}>
         Getting back to the true you. It can be that simple. Yoga offers up a way for us to see a world that is working for you instead of against you.
       </AnimatedText>
@@ -58,7 +56,7 @@ export default function Welcome() {
 
       {/* Image */}
       <motion.div
-        className="flex justify-center mt-8 sm:w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]"
+        className="flex justify-center mt-8 mx-auto max-w-80 md:w-[400px] lg:w-[500px] xl:w-[600px] 2xl:w-[700px]"
         initial={{ y: 300, scale: 0.5 }}
         animate={{ y: 0, scale: 1 }}
         transition={{ duration: 0.5 }}
