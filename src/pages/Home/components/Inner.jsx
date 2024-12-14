@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Card Component for Each Yoga Offering
 const OfferingCard = ({ title, description, icon }) => {
   return (
     <div className="group relative bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
@@ -16,7 +15,6 @@ const OfferingCard = ({ title, description, icon }) => {
   );
 };
 
-// Model 5: Card Grid for Yoga Offerings
 const OfferingModel5 = () => {
   return (
     <div className="bg-gray-100 py-12 px-6 sm:px-8 lg:px-16">

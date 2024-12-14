@@ -13,10 +13,10 @@ const YogaFooter = () => {
 
           {/* Links Section */}
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 text-center sm:text-left">
-            <a href="#about" className="hover:text-green-500">Home</a>
-            <a href="#services" className="hover:text-green-500">Articles</a>
-            <a href="#classes" className="hover:text-green-500">About Us</a>
-            <a href="#contact" className="hover:text-green-500">Contact Us</a>
+            <a href="/" className="hover:text-green-500">Home</a>
+            <a href="/article" className="hover:text-green-500">Article</a>
+            <a href="contact" className="hover:text-green-500">Contact</a>
+            <a href="about" className="hover:text-green-500">About</a>
           </div>
         </div>
 

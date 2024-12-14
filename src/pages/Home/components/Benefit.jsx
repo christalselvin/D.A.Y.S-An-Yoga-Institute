@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
-// If you want to use custom icons, you can import icons from `react-icons` or another icon library
 import { FaRocket, FaBriefcase, FaUsers } from "react-icons/fa";
 
-// Updated mock data with new icons
 const data = [
   { id: 1, logo: <FaRocket className="text-4xl text-red-500" />, title: "Growth", desc: "Achieve personal and professional growth" },
   { id: 2, logo: <FaBriefcase className="text-4xl text-blue-500" />, title: "Career", desc: "Explore diverse career opportunities" },
@@ -12,7 +10,6 @@ const data = [
 export default function Benefit() {
   return (
     <div className="px-4 sm:px-6 md:px-16 lg:px-32 py-10">
-      {/* Heading Section */}
       <motion.h2
         className="text-center text-3xl md:text-4xl font-semibold mb-8"
         initial={{ opacity: 0 }}
@@ -22,7 +19,6 @@ export default function Benefit() {
       Benefits of Joining Us
       </motion.h2>
 
-      {/* Benefits Section */}
       <motion.div
         className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 md:gap-9 md:w-[80%] mx-auto py-10 font-semibold"
         variants={{
@@ -44,16 +40,12 @@ export default function Benefit() {
             transition={{ type: "spring", stiffness: 120 }}
             aria-label={`Benefit: ${item.title}`}
           >
-            {/* Icon */}
             <div className="mb-3">{item.logo}</div>
 
-            {/* Title */}
             <h3 className="md:text-xl text-lg font-bold uppercase">{item.title}</h3>
 
-            {/* Divider Line */}
             <div className="md:w-20 w-16 h-1 bg-blue-600"></div>
 
-            {/* Description */}
             <p className="text-sm md:text-base text-center text-gray-700">{item.desc}</p>
           </motion.div>
         ))}

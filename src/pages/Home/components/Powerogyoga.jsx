@@ -1,7 +1,7 @@
 import React from "react";
 import SpaIcon from "@mui/icons-material/Spa"; // Import the new icon
 import { motion } from "framer-motion";
-import Power from "../components/assets/power.png"; // New image source
+import Power from "../components/assets/Home/power.png"; // New image source
 import { Link } from "react-router-dom";
 
 export default function Welcome() {
@@ -25,7 +25,7 @@ export default function Welcome() {
             <img
               src={Power}
               alt="Yoga hero"
-              className="w-[150px] h-[150px] rounded-full object-cover" // Making the image round
+              className="w-[300px] h-[300px] rounded-full object-cover"
             />
           </motion.div>
 
@@ -85,9 +85,13 @@ export default function Welcome() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <button className="bg-green-500 text-white font-bold py-2 px-4 rounded-full shadow-lg mt-4">
+          <motion.button
+            className="bg-green-500 text-white font-bold py-2 px-4 rounded-full shadow-lg mt-4"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <Link to="contact"> Learn More </Link>
-          </button>
+          </motion.button>
         </motion.div>
       </div>
     </div>

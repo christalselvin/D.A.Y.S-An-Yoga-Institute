@@ -3,7 +3,6 @@ import Welcome from "./components/Welcome";
 import About from "./components/About";
 import Benefit from "./components/Benefit"
 import Testimonial from "./components/Testimonial"
-import Footer from "./components/Footer";
 import Inner from "./components/Inner";
 import OurOffer from "./components/Ouroffer";
 import Powerofyoga from "./components/Powerogyoga";
@@ -11,7 +10,7 @@ import Powerofyoga from "./components/Powerogyoga";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Welcome />
       <About />
       <Benefit />
@@ -19,7 +18,6 @@ export default function Home() {
       <Inner />
       <OurOffer />
       <Powerofyoga />
-      <Footer />
     </div>
   );
 }
