@@ -1,6 +1,6 @@
 import React from "react";
 import CallMergeIcon from "@mui/icons-material/CallMerge";
-import hero from "../components/assets/Home/hero.png";
+import logo from "../components/assets/Home/logo.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; 
 import home1 from "./assets/Home/home1.png"
@@ -81,7 +81,7 @@ export default function Welcome() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }} 
       >
-        <img src={hero} alt="Yoga hero" className="w-full h-auto" />
+        <img src={logo} alt="Yoga hero" className="w-full h-auto" />
       </motion.div>
       {/* Team Section */}
       <motion.section 
@@ -98,7 +98,6 @@ export default function Welcome() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-         class Meet the Team
         </motion.h2>
         <div className="flex justify-center space-x-6">
           

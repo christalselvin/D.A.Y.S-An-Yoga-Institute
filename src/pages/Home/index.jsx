@@ -15,11 +15,11 @@ export default function Home() {
       <Welcome />
       <About />
       <Benefit />
-      <Chatbot />
       <Testimonial />
       <Inner />
       <OurOffer />
       <Powerofyoga />
+      <Chatbot />
     </div>
   );
 }

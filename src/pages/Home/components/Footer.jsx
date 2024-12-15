@@ -8,7 +8,8 @@ const YogaFooter = () => {
         {/* Logo and Brand Name */}
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <div className="text-2xl font-bold mb-4 sm:mb-0">
-            <span className="text-green-500">D.A.Y.S</span> YOHA
+            <span className="text-green-500">D.A.Y.S</span> AN Yoga INSTITUTE
+
           </div>
 
           {/* Links Section */}

@@ -38,7 +38,7 @@ export default function Navbar() {
         transition={{ duration: 0.5, type: "spring", stiffness: 55 }}
       >
         <a href="/" className="inline-block ml-[-1rem]">
-          <img src={logo} alt="logo" className="w-16 md:h-16" />
+          <img src={logo} alt="logo" className="w-16 md:h-16 p" />
         </a>
 
         <ul className="hidden md:flex gap-8 font-poppins">
