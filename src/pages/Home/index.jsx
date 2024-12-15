@@ -6,6 +6,7 @@ import Testimonial from "./components/Testimonial"
 import Inner from "./components/Inner";
 import OurOffer from "./components/Ouroffer";
 import Powerofyoga from "./components/Powerogyoga";
+import Chatbot from "./components/Chatbot";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Welcome />
       <About />
       <Benefit />
+      <Chatbot />
       <Testimonial />
       <Inner />
       <OurOffer />

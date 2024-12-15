@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
-// Import the user icon image
-import divine from "./assets/chatbot girl.jpg";
+import chatgirl from "./assets/Home/chatbot girl.png";
 
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [showChatbot, setShowChatbot] = useState(true);
+  const [audio] = useState(new Audio("/assets/message-sound.mp3")); // Load the audio file
 
   useEffect(() => {
     // Display welcome message after 2 seconds
@@ -21,6 +20,13 @@ const Chatbot = () => {
     // Cleanup timer to avoid memory leaks
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    // Play sound whenever a new message is added (except for initial messages)
+    if (messages.length > 0) {
+      audio.play();
+    }
+  }, [messages, audio]); // Play sound whenever messages change
 
   useEffect(() => {
     // Toggle chatbot visibility on scroll
@@ -47,9 +53,9 @@ const Chatbot = () => {
 
       try {
         const response = await axios.post(
-          'https://yoha-backend.onrender.com/bot',
+          "https://yoha-backend.onrender.com/bot",
           { message: input },
-          { headers: { 'Content-Type': 'application/json' } }
+          { headers: { "Content-Type": "application/json" } }
         );
 
         setMessages((prevMessages) => [
@@ -57,7 +63,7 @@ const Chatbot = () => {
           { type: "bot", text: response.data.response },
         ]);
       } catch (error) {
-        console.error('Error sending message to chatbot:', error);
+        console.error("Error sending message to chatbot:", error);
       }
 
       setInput(""); // Clear input field after sending
@@ -74,7 +80,7 @@ const Chatbot = () => {
     <div
       className={`fixed bottom-10 right-4 flex flex-col items-end mb-14 py-8 transition-opacity duration-300 ${showChatbot ? "opacity-100" : "opacity-0 pointer-events-none"}`}
     >
-      <div className="w-full max-w-xs md:max-w-md p-4 bg-white rounded-lg shadow-lg">
+      <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg p-4 bg-white rounded-lg shadow-lg">
         <div className="flex flex-col space-y-4 mb-4 max-h-[300px] overflow-y-auto">
           {messages.map((message, index) => (
             <div
@@ -95,13 +101,13 @@ const Chatbot = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 p-2 border rounded-l-lg focus:outline-none"
+            className="flex-1 p-2 sm:p-3 border rounded-l-lg focus:outline-none text-sm sm:text-base"
             placeholder="Type a message..."
             aria-label="Type a message"
           />
           <button
             onClick={handleSend}
-            className="bg-blue-500 text-white p-2 rounded-r-lg"
+            className="bg-blue-500 text-white p-2 sm:p-3 rounded-r-lg text-sm sm:text-base"
             aria-label="Send message"
           >
             Send
@@ -109,10 +115,10 @@ const Chatbot = () => {
         </div>
       </div>
       <div
-        className="w-12 h-12 rounded-full flex items-center justify-center cursor-pointer"
+        className="w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center cursor-pointer"
         onClick={() => setShowChatbot(!showChatbot)}
       >
-        <img src={divine} alt="User Icon" className="w-full h-full rounded-full" />
+        <img src={chatgirl} alt="User Icon" className="w-full h-full rounded-full" />
       </div>
     </div>
   );

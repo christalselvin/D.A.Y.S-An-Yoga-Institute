@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import home1 from "./assets/Home/home1.png"
 import home2 from "./assets/Home/home2.png"
 import home3 from "./assets/Home/home3.png"
-import home4 from "./assets/Home/home1.png"
+
 
 const AnimatedText = ({ children, className }) => (
   <motion.p
