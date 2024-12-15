@@ -1,10 +1,10 @@
 import React from 'react'
-import Blog from './components/Blog'
+import Article from './components/Article'
 
 export default function index() {
   return (
     <div>
-      <Blog />
+      <Article />
     </div>
   )
 }

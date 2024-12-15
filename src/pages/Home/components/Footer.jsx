@@ -23,7 +23,7 @@ const YogaFooter = () => {
         {/* Social Media Links */}
         <div className="mt-6 flex justify-center space-x-6">
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/profile.php?id=100071712365099"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-green-500"
@@ -32,7 +32,7 @@ const YogaFooter = () => {
           </a>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/anyogainstitute?igsh=MXRmaWh0dmtyNGZsMw=="
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-green-500"
@@ -41,7 +41,7 @@ const YogaFooter = () => {
           </a>
 
           <a
-            href="https://twitter.com"
+            href="https://x.com/ashishu9899?lang=en"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-green-500"
@@ -50,7 +50,7 @@ const YogaFooter = () => {
           </a>
 
           <a
-            href="https://wa.me/917708927972"
+            href="https://wa.me/918127227284"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-green-500"
@@ -59,7 +59,7 @@ const YogaFooter = () => {
           </a>
 
           <a
-            href="https://youtube.com"
+            href="https://youtube.com/@anyogainstitute?si=lowYzoFr96ofjBE0"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-green-500"
@@ -74,7 +74,7 @@ const YogaFooter = () => {
         <p>
           &copy; 2025 D.A.Y.S AN YOGA All rights reserved.{' '}
           <a
-            href="https://wa.me/917708927972"
+            href="https://www.linkedin.com/feed/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-pink-500 hover:text-green-700 hover:underline"

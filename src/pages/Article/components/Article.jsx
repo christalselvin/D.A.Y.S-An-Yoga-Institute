@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRegStar } from "react-icons/fa"; // Example icon
+import { FaRegStar } from "react-icons/fa"; 
 import { Link } from "react-router-dom";
 import BlogIMage1 from "../components/assets/blog1.png";
 import BlogIMage2 from "../components/assets/blog2.png";
@@ -11,9 +11,9 @@ import BlogIMage6 from "../components/assets/blog6.png";
 import BlogIMage7 from "../components/assets/blog7.png";
 import BlogIMage8 from "../components/assets/blog8.png";
 
-export default function Blog() {
+export default function Article() {
   const currentYear = new Date().getFullYear();
-  const lastUpdated = `${currentYear}-12-14`;
+  const lastUpdated = `${2025}-01-01`;
 
   return (
     <div className="min-h-screen bg-gray-100 overflow-x-hidden">

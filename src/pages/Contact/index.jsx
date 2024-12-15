@@ -1,12 +1,16 @@
 import React from 'react'
-import ContactPage from './ContactPage'
-import ThankYouPage from './ThankYouPage'
+import Contactform from './componets/Contactform'
+import Imagegrid from './componets/ImageGrid'
+import Mapsection from './componets/Mapsection'
+import Textimage from './componets/Textimage'
 
 export default function index() {
   return (
     <div>
-      <ContactPage />
-      <ThankYouPage />
+      <Imagegrid />
+      <Textimage />
+      <Mapsection />
+      <Contactform />
     </div>
   )
 }

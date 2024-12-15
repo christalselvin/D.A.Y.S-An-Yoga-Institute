@@ -3,6 +3,10 @@ import CallMergeIcon from "@mui/icons-material/CallMerge";
 import hero from "../components/assets/Home/hero.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; 
+import home1 from "./assets/Home/home1.png"
+import home2 from "./assets/Home/home2.png"
+import home3 from "./assets/Home/home3.png"
+import home4 from "./assets/Home/home1.png"
 
 const AnimatedText = ({ children, className }) => (
   <motion.p
@@ -79,6 +83,54 @@ export default function Welcome() {
       >
         <img src={hero} alt="Yoga hero" className="w-full h-auto" />
       </motion.div>
+      {/* Team Section */}
+      <motion.section 
+        className="mb-12 text-center"
+        initial={{ opacity: 0 }} 
+        whileInView={{ opacity: 1 }} 
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <motion.h2 
+          className="text-2xl font-semibold text-gray-800 mb-10 p-7"
+          initial={{ y: -50, opacity: 0 }} 
+          whileInView={{ y: 0, opacity: 1 }} 
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+        >
+         class Meet the Team
+        </motion.h2>
+        <div className="flex justify-center space-x-6">
+          
+          <motion.img 
+            src={home1} 
+            alt="Palak" 
+            className="w-32 h-32 rounded-full object-cover shadow-lg"
+            initial={{ opacity: 0 }} 
+            whileInView={{ opacity: 1 }} 
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: true }}
+          />
+          <motion.img 
+            src={home2} 
+            alt="Anjali" 
+            className="w-32 h-32 rounded-full object-cover shadow-lg"
+            initial={{ opacity: 0 }} 
+            whileInView={{ opacity: 1 }} 
+            transition={{ duration: 1, delay: 0.6 }}
+            viewport={{ once: true }}
+          />
+          <motion.img 
+            src={home3} 
+            alt="Swati" 
+            className="w-32 h-32 rounded-full object-cover shadow-lg"
+            initial={{ opacity: 0 }} 
+            whileInView={{ opacity: 1 }} 
+            transition={{ duration: 1, delay: 0.8 }}
+            viewport={{ once: true }}
+          />
+        </div>
+      </motion.section>
     </div>
   );
 }

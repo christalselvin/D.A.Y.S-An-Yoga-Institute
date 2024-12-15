@@ -16,8 +16,9 @@ function App() {
       children: [
         { index: true, element: <Home /> },
         { path: "article", element: <Article /> },
-        { path: "contact", element: <Contact /> },
         { path: "about", element: <AboutUs /> },
+        { path: "contact", element: <Contact /> },
+       
       ],
     },
     
