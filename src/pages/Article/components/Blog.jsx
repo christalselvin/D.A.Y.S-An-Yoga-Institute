@@ -2,14 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaRegStar } from "react-icons/fa"; // Example icon
 import { Link } from "react-router-dom";
-import BlogIMage1 from "../components/assets/Blog/blog1.png";
-import BlogIMage2 from "../components/assets/Blog/blog2.png";
-import BlogIMage3 from "../components/assets/Blog/blog3.png";
-import BlogIMage4 from "../components/assets/Blog/blog4.png";
-import BlogIMage5 from "../components/assets/Blog/blog5.png";
-import BlogIMage6 from "../components/assets/Blog/blog6.png";
-import BlogIMage7 from "../components/assets/Blog/blog7.png";
-import BlogIMage8 from "../components/assets/Blog/blog8.png";
+import BlogIMage1 from "../components/assets/blog1.png";
+import BlogIMage2 from "../components/assets/blog2.png";
+import BlogIMage3 from "../components/assets/blog3.png";
+import BlogIMage4 from "../components/assets/blog4.png";
+import BlogIMage5 from "../components/assets/blog5.png";
+import BlogIMage6 from "../components/assets/blog6.png";
+import BlogIMage7 from "../components/assets/blog7.png";
+import BlogIMage8 from "../components/assets/blog8.png";
 
 export default function Blog() {
   const currentYear = new Date().getFullYear();

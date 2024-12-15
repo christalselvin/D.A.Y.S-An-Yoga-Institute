@@ -5,7 +5,7 @@ RouterProvider,
 import Home from "./pages/Home";
 import Article from "./pages/Article";
 import Contact from "./pages/Contact";
-import About from "./pages/About";
+import AboutUs from "./pages/About/Component/AboutUs";
 import Layout from "./pages/Home/components/Layout";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         { index: true, element: <Home /> },
         { path: "article", element: <Article /> },
         { path: "contact", element: <Contact /> },
-        { path: "about", element: <About /> },
+        { path: "about", element: <AboutUs /> },
       ],
     },
     

@@ -1,9 +1,10 @@
-import Winner from "./components/Winner";
+import React from 'react'
+import About from '../About/Component/AboutUs';
 
-export default function About() {
+export default function index() {
   return (
-    <div className="container mx-auto px-4 md:px-0">
-      <Winner />
+    <div>
+      <About />
     </div>
-  );
+  )
 }
